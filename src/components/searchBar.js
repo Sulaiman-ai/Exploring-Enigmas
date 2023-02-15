@@ -15,4 +15,6 @@ const handleChange = (event) => {
 
 if (searchInput.length > 0) {
   console.log(searchInput);
+} else {
+  console.log("Please enter a value!");
 }
