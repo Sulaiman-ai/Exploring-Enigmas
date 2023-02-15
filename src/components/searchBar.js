@@ -5,3 +5,10 @@ import React, { useState } from "react";
 const searchBar = () => {
   const [searchInput, setSearchInput] = useState("");
 };
+
+// Handler function that reads changes in the search bar
+
+const handleChange = (event) => {
+  event.preventDefault();
+  setSearchInput(event.target.value);
+};
