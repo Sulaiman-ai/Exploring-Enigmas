@@ -29,3 +29,5 @@ return (
     />
   </div>
 );
+
+export default searchBar;
