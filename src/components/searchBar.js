@@ -18,3 +18,14 @@ if (searchInput.length > 0) {
 } else {
   console.log("Please enter a value!");
 }
+
+return (
+  <div>
+    <input
+      type="search"
+      placeholder="Search"
+      onChange={handleChange}
+      value={searchInput}
+    />
+  </div>
+);
