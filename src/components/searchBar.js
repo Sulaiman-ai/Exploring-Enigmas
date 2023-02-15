@@ -12,3 +12,7 @@ const handleChange = (event) => {
   event.preventDefault();
   setSearchInput(event.target.value);
 };
+
+if (searchInput.length > 0) {
+  console.log(searchInput);
+}
