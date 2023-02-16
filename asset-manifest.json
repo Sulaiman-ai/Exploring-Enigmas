@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Sulaiman-ai/Exploring-Enigmas/static/css/main.8edd2963.css",
-    "main.js": "/Sulaiman-ai/Exploring-Enigmas/static/js/main.8d11c05d.js",
+    "main.js": "/Sulaiman-ai/Exploring-Enigmas/static/js/main.ad541f3f.js",
     "static/media/travel-1.jpg": "/Sulaiman-ai/Exploring-Enigmas/static/media/travel-1.b59b13d8fddd178e854b.jpg",
     "index.html": "/Sulaiman-ai/Exploring-Enigmas/index.html",
     "main.8edd2963.css.map": "/Sulaiman-ai/Exploring-Enigmas/static/css/main.8edd2963.css.map",
-    "main.8d11c05d.js.map": "/Sulaiman-ai/Exploring-Enigmas/static/js/main.8d11c05d.js.map"
+    "main.ad541f3f.js.map": "/Sulaiman-ai/Exploring-Enigmas/static/js/main.ad541f3f.js.map"
   },
   "entrypoints": [
     "static/css/main.8edd2963.css",
-    "static/js/main.8d11c05d.js"
+    "static/js/main.ad541f3f.js"
   ]
 }
