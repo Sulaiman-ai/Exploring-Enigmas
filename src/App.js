@@ -1,5 +1,5 @@
-import Hero from './components/Hero';
-import SearchBar from './components/searchBar';
+import Hero from "./components/Hero";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <Hero />
       <SearchBar />
     </>
-  )
+  );
 }
 
 export default App;
