@@ -1,11 +1,11 @@
-import Hero from "./components/Hero";
-import SearchBar from "./components/SearchBar";
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   return (
     <>
+      <Navbar />
       <Hero />
-      <SearchBar />
     </>
   );
 }
