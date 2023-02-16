@@ -7,7 +7,7 @@ function App() {
       <Navbar />
       <Hero />
     </>
-  )
+  );
 }
 
 export default App;
