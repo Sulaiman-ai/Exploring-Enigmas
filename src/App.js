@@ -1,13 +1,14 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+import {Routes, Route} from 'react-router-dom';
+import Home from './components/Pages/Home/Home';
+import Itinerary from './components/Pages/ItineraryPage/Itinerary';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/itinerary" element={<Itinerary />} />
+      </Routes>
     </>
   );
 }
