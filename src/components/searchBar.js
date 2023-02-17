@@ -1,5 +1,6 @@
 // Imports
 import React, { useState } from "react";
+import axios from "axios";
 
 // Search Bar Function
 function SearchBar() {
@@ -10,8 +11,23 @@ const handleSubmit = async (event) => {
 
   if(key===13) {
     console.log(searchInput)
+
+    const options = {
+      method: 'GET',
+      url: 'https://hotels4.p.rapidapi.com/locations/v3/search',
+      params: {q: 'new york', locale: 'en_US', langid: '1033', siteid: '300000001'},
+      headers: {
+        'X-RapidAPI-Key': 'e7ba25ecc0msh5d2a22f5c1f3025p11bef4jsn0feeeaeaef60',
+        'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
+      }
+    };
+    
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
   }
-  // await fetch
 } 
 
   const handleChange = (event) => {
