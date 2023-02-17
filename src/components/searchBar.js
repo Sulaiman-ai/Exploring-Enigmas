@@ -17,7 +17,7 @@ function SearchBar() {
   }
 
   return (
-    <div>
+    <div className="search-wrapper">
       <input
         type="search"
         placeholder="Search"
