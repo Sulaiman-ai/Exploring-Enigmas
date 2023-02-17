@@ -54,6 +54,10 @@ async function search(type, city, nom_baseURL, nom_params, OTM_URL, OTMparams, a
     console.log('data', data);
 }
 
+// function search(type, {street,city,country,state,postalcode,query,format,addressdetails}){
+
+// }
+
 
 search(name, city, NOMINATIM_BASE_URL, nom_params, OTM_URL, OTMparams, OTM_APIKEY);
 
