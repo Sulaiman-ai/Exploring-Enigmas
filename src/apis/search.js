@@ -2,9 +2,9 @@
 import {searchNominatim} from './nominatim.js';
 import { searchOTM } from './opentripmap.js';
 
-const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/";
-const OTM_URL = "https://api.opentripmap.com/0.1/";
-const OTM_APIKEY = "5ae2e3f221c38a28845f05b67ee7c6c2f1b59b43d2892ec295c256a8";
+// const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/";
+// const OTM_URL = "https://api.opentripmap.com/0.1/";
+// const OTM_APIKEY = "5ae2e3f221c38a28845f05b67ee7c6c2f1b59b43d2892ec295c256a8";
 
 const name = 'bakeries';
 const city = 'london';
@@ -40,9 +40,11 @@ OTMparams.bounding_box = {
 }
 // params.kinds = 'bakeries';
 
-async function search(type, city, nom_baseURL, nom_params, OTM_URL, OTMparams, apikey){
+async function search(type, city, nom_params, OTMparams){
     nom_params.city = city;
-    const cities = await searchNominatim(nom_baseURL, nom_params);
+    nom_params.state = 'England'
+    const cities = await searchNominatim(nom_params);
+    console.log(cities)
     // console.log(cities)
     // const nomURL = formatNOMURL(NOMINATIM_BASE_URL, nom_params);
     OTMparams.kinds = type;
@@ -50,14 +52,28 @@ async function search(type, city, nom_baseURL, nom_params, OTM_URL, OTMparams, a
     OTMparams.bounding_box.lat_max = cities[0].boundingbox[1];
     OTMparams.bounding_box.lon_min = cities[0].boundingbox[2];
     OTMparams.bounding_box.lon_max = cities[0].boundingbox[3]
-    const data = await searchOTM(OTM_URL, OTMparams, apikey);
-    console.log('data', data);
+    const data = await searchOTM(OTMparams);
+    // console.log('data', data);
 }
 
 // function search(type, {street,city,country,state,postalcode,query,format,addressdetails}){
 
 // }
 
+search(name, city, nom_params, OTMparams);
 
-search(name, city, NOMINATIM_BASE_URL, nom_params, OTM_URL, OTMparams, OTM_APIKEY);
+// search(name, city, NOMINATIM_BASE_URL, nom_params, OTM_URL, OTMparams, OTM_APIKEY);
+
+// let circle = {
+//     radius: 10,
+//     perimeter: 40
+// };
+
+// let another = {
+//     radius: 30,
+// }
+
+// circle = {
+//     ...ci
+// }
 

@@ -12,20 +12,23 @@ const params = {
     query: '',
     format: 'json',
     addressdetails: 1,
+    extratags: 1
 }
 
 params.city = 'london';
 
 export function formatNOMURL(baseURL, params){
-    searchString = Object.keys(params).map((key)=>{
-        return (params[key]) ? `${key}=${params[key]}&` : ``;
-    })
-    console.log(searchString);
-    return `${baseURL}search?city=${params.city}&format=${params.format}&addressdetails=1&extratags=1`;
+    const searchString = Object.keys(params).map((key, i, arr)=>{
+        let term = (params[key]) ? `${key}=${params[key]}${(i===arr.length-1) ? '' : `&`}` : ``;
+        return term;
+    }).join(',')
+    .replace(/\,/g, '');
+    return `${baseURL}search?${searchString}`;
+    // return `${baseURL}search?city=${params.city}&format=${params.format}&addressdetails=1&extratags=1`;
 }
 
-export async function searchNominatim(baseURL, params){
-    const url = formatNOMURL(baseURL, params);
+export async function searchNominatim(params){
+    const url = formatNOMURL(NOMINATIM_BASE_URL, params);
     const response = await fetch(url);
     const data = await response.json();
     const cities = data.filter(place => place.type=="city")
@@ -33,7 +36,8 @@ export async function searchNominatim(baseURL, params){
     return cities;
 }
 
-searchNominatim(NOMINATIM_BASE_URL, params);
-console.log("hello")
+// console.log(await searchNominatim(params));
+
+// console.log(formatNOMURL(NOMINATIM_BASE_URL, params));
 
 // export default {formatNOMURL, searchNominatim};

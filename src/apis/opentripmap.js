@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 const OTM_APIKEY = "5ae2e3f221c38a28845f05b67ee7c6c2f1b59b43d2892ec295c256a8";
 const OTM_URL = "https://api.opentripmap.com/0.1/";
@@ -27,11 +27,11 @@ params.bounding_box = {
 }
 params.kinds = 'bakeries';
 
-export function formatOTMURL(baseURL, params, apikey){
-    return `${baseURL}${params.lang}/places/${params.searchby}
+export function formatOTMURL(params){
+    return `${OTM_URL}${params.lang}/places/${params.searchby}
 ?lon_min=${params.bounding_box.lon_min}&lon_max=${params.bounding_box.lon_max}
 &lat_min=${params.bounding_box.lat_min}&lat_max=${params.bounding_box.lat_max}&kinds=${params.kinds}
-&apikey=${apikey}`;
+&apikey=${OTM_APIKEY}`;
 }
 
 export async function searchOTM(baseURL, params, apikey){
