@@ -92,9 +92,14 @@ body {
   display: grid;
   height: 70px;
   grid-template-columns: 0.5fr 5fr 0.5fr;
+  margin: 0 70px;
 }
 
-
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 footer {
   display: flex;
