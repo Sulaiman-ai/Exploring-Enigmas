@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Lato;
 }
 
 /* Navbar, logo and nav links */
@@ -19,15 +19,19 @@ body {
 .nav-logo {
   font-size: 20px;
   padding-left: 20px;
+  height: 50px;
 }
 
 .nav-links a {
   padding-right: 20px;
   text-decoration: none;
+  color: #16697A;
+  font-size: 1.1rem;
 }
 
 .nav-links a:hover {
   cursor: pointer;
+  color: #489fb5;
 }
 
 /* Homepage Hero Banner and content within banner */
@@ -48,13 +52,40 @@ body {
   font-size: 35px;
   color: #fff;
   margin-bottom: 15px;
-
+  font-weight: 100;
 }
 
 .hero-h2 {
   font-size: 20px;
   font-weight: 100;
   color: #fff;
+}
+
+.search {
+  margin-top: 20px;
+  height: 50px;
+  background-color: transparent;
+  border: solid 2px white;
+  border-radius: 30px;
+  padding-left: 50px;
+  color: white;
+  font-size: 17px;
+}
+
+input::placeholder {
+  color: #ffffff !important;
+  font-size: 1rem;
+}
+
+.search-icon {
+  position: relative;
+  font-size: 1.3rem;
+  z-index: 1;
+  right: -20px;
+  top: 5px;
+  color: white;
+  cursor: pointer;
+  width: 0;
 }
 
 /* Itinerary page Banner */

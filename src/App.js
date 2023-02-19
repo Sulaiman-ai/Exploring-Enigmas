@@ -9,8 +9,6 @@ import Day4 from './components/Pages/ItineraryPage/Day4';
 import Day5 from './components/Pages/ItineraryPage/Day5';
 import Day6 from './components/Pages/ItineraryPage/Day6';
 import Day7 from './components/Pages/ItineraryPage/Day7';
-
-import Itinerary from './components/Pages/ItineraryPage/Itinerary';
 import MapSearch from './components/searchMaps';
 
 function App() {
