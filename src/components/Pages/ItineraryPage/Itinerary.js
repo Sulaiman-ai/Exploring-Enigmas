@@ -1,7 +1,13 @@
+import Banner from './Banner';
+import DayButton from './DayButton';
+import Planner from './Planner';
+
 function Itinerary() {
-    return(
+    return (
         <>
-            <h1>My Itinerary</h1>
+            <Banner />
+            <DayButton />
+            <Planner />
         </>
     )
 }

@@ -1,3 +1,4 @@
+/* RESETS */
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +8,7 @@ body {
   font-family: sans-serif;
 }
 
+/* Navbar, logo and nav links */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,6 +30,7 @@ body {
   cursor: pointer;
 }
 
+/* Homepage Hero Banner and content within banner */
 .hero-banner {
   background: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./travel-1.jpg');
@@ -52,6 +55,50 @@ body {
   font-size: 20px;
   font-weight: 100;
   color: #fff;
+}
+
+/* Itinerary page Banner */
+.itin-banner {
+  background-color: lightgrey;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.itin-h1 {
+  margin-left: 100px;
+  font-size: 1.8rem;
+}
+
+/* Itinerary page buttons for each day */
+.day-btns {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+
+.day-btn {
+  border: none;
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Itinerary planner section */
+.planner-row {
+  display: grid;
+  height: 70px;
+  grid-template-columns: 0.5fr 5fr 0.5fr;
+  margin: 0 70px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
