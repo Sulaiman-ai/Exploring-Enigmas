@@ -85,6 +85,13 @@ body {
   height: 30px;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none;
+  border: solid 1px darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: darkgrey;
 }
 
 /* Itinerary planner section */
