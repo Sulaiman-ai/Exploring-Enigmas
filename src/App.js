@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Pages/Home/Home';
 import Footer from './components/Footer';
 import Itinerary from './components/Pages/ItineraryPage/Itinerary';
+import MapSearch from './components/searchMaps';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/itinerary" element={<Itinerary />} />
+        <Route path="/maps" element={<MapSearch />} />
       </Routes>
       <Footer />
     </>
