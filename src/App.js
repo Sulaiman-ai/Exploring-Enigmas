@@ -10,6 +10,9 @@ import Day5 from './components/Pages/ItineraryPage/Day5';
 import Day6 from './components/Pages/ItineraryPage/Day6';
 import Day7 from './components/Pages/ItineraryPage/Day7';
 
+import Itinerary from './components/Pages/ItineraryPage/Itinerary';
+import MapSearch from './components/searchMaps';
+
 function App() {
   return (
     <>
@@ -23,6 +26,8 @@ function App() {
         <Route path="/day-five" element={<Day5 />} />
         <Route path="/day-six" element={<Day6 />} />
         <Route path="/day-seven" element={<Day7 />} />
+        <Route path="/itinerary" element={<Itinerary />} />
+        <Route path="/maps" element={<MapSearch />} />
       </Routes>
       <Footer />
     </>
