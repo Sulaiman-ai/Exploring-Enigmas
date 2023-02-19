@@ -27,13 +27,17 @@ export function formatNOMURL(baseURL, params){
     // return `${baseURL}search?city=${params.city}&format=${params.format}&addressdetails=1&extratags=1`;
 }
 
-export async function searchNominatim(params){
-    const url = formatNOMURL(NOMINATIM_BASE_URL, params);
+function createURL(searchTerm){
+    return `${NOMINATIM_BASE_URL}/search?q=${searchTerm}&format=json&addressdetails=1`;
+}
+
+export async function nominatimSearchLocation(locationSearch){
+    const url = createURL(locationSearch);
     const response = await fetch(url);
-    const data = await response.json();
-    const cities = data.filter(place => place.type=="city")
+    const locations = await response.json();
+    // const cities = data.filter(place => place.type=="city")
     // console.log(cities);
-    return cities;
+    return locations[0];
 }
 
 // console.log(await searchNominatim(params));

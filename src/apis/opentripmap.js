@@ -3,6 +3,11 @@
 const OTM_APIKEY = "5ae2e3f221c38a28845f05b67ee7c6c2f1b59b43d2892ec295c256a8";
 const OTM_URL = "https://api.opentripmap.com/0.1/";
 
+const geonameParams = {
+    lang: 'en',
+    name: ''
+};
+
 const params = {
     searchby: '',
     lang: 'en',
@@ -34,8 +39,16 @@ export function formatOTMURL(params){
 &apikey=${OTM_APIKEY}`;
 }
 
-export async function searchOTM(baseURL, params, apikey){
-    const url = formatOTMURL(baseURL, params, apikey);
+function createURL(searchTerm, bounding_box){
+    return `${OTM_URL}${params.lang}/places/bbox
+?lon_min=${bounding_box.lon_min}&lon_max=${bounding_box.lon_max}
+&lat_min=${bounding_box.lat_min}&lat_max=${bounding_box.lat_max}&name=${searchTerm}
+&apikey=${OTM_APIKEY}`;
+
+}
+
+export async function searchOTM(searchTerm, bounding_box){
+    const url = createURL(searchTerm, bounding_box);
     // console.log(url);
     const response = await fetch(url);
     const data = await response.json();
