@@ -1,17 +1,5 @@
 import {Link} from 'react-router-dom';
 
-function showComponent() {
-
-}
-
-function buttonClicked(e){
-        if (e.target.innerText === "Day 1") {
-            showComponent();
-        } else {
-            console.log('other button clicked')
-        }
-}
-
 function DayButton() {
 
     return (
