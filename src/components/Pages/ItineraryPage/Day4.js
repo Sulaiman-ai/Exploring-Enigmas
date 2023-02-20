@@ -1,6 +1,12 @@
-function Planner() {
+import Banner from './Banner';
+import DayButton from './DayButton';
+
+function Day4() {
     return (
         <>
+            <Banner />
+            <DayButton />
+            <h2> Day Four </h2>
             <div className="planner-row">
                 <div className="time">00:00</div>
                 <textarea className="text-box"></textarea>
@@ -125,4 +131,4 @@ function Planner() {
     )
 }
 
-export default Planner;
+export default Day4;
