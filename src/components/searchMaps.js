@@ -10,14 +10,14 @@ function MapSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [locationSearch, setLocationSearch] = useState("");
   const [result, setResult] = useState([]);
-  const [mapCoordinates, setCoordinates] = useState({})
+  const [mapCoordinates, setCoordinates] = useState({lat: 0, lon: 0});
 
   const handleSubmit = async (event) => {
     const [placesList, lat, lon] = await search(searchTerm, locationSearch);
     setResult(placesList);
     setCoordinates({
-      lat: lat,
-      lon: lon,
+      lat: parseFloat(lat),
+      lon: parseFloat(lon),
     });
   };
 
@@ -41,7 +41,7 @@ function MapSearch() {
         ))}
       </div>
       <div className="map">
-        <MyMap/>
+        <MyMap lat={mapCoordinates.lat} lon ={mapCoordinates.lon}/>
       </div>
     </div>
   );
