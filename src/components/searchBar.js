@@ -48,7 +48,7 @@ function SearchBar() {
 
   return (
     <div className="search-wrapper">
-      <i class="fas fa-search search-icon"></i>
+      <button className="fas fa-search search-icon"></button>
       <input
         type="search"
         placeholder="Search"
