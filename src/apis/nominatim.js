@@ -63,7 +63,7 @@ export async function searchByOSMID(osm_type, osm_ID){
     const response = await fetch(url);
     const data = await response.json();
     console.log('osmid search', data);
-    return (({display_name, address, extratags}) => ({display_name,address,extratags}))(data[0]);
+    return (({display_name, address, extratags, lat, lon}) => ({display_name,address,extratags, lat, lon}))(data[0]);
 }
 
 // console.log(await searchNominatim(params));

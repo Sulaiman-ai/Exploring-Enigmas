@@ -65,7 +65,7 @@ export async function search(name, location_name){
         return data;
     }));
     console.log('placeList', placesList);
-    return [placesList, location.lat, location.lon];
+    return [placesList, {lat:location.lat, lon:location.lon}];
     // return data[0].properties.name;
     // Once it has found a list of places, run the Nominatim API to get the 
 }
