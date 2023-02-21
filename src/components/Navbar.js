@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom';
+import logo from '../logo.png'
 
 function Navbar() {
     return (
         <div className="navbar">
-            <a className="nav-logo">Exploring Enigmas</a>
+            <img src={logo} className="nav-logo"/>
             <nav className="nav-links">
                 <Link to="/">Home</Link>
                 <Link to="/day-one">Itinerary</Link>
