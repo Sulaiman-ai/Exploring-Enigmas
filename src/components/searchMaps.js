@@ -25,7 +25,11 @@ function MapSearch() {
       <button onClick={handleSubmit}>Search</button>
       <div className="result-wrapper">
         {result.map((e, i)=>(
-          <p key={i}>{e.properties.name}</p>
+          <>
+          <p key={i}>{e.display_name.split(',')[0]}</p>
+          {/* <p key={i}>{e.address.split(',')[0]}</p> */}
+          <p key={i*10}>Website: {e.extratags.website}</p>
+          </>
         ))}
       </div>
     </div>

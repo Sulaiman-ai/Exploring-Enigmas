@@ -40,6 +40,32 @@ export async function nominatimSearchLocation(locationSearch){
     return locations[0];
 }
 
+function createOSMIDSearchURL(osm_type, osm_ID){
+    let type_code = "";
+    switch (osm_type){
+        case "node":
+            type_code = "N";
+            break;
+        case "way":
+            type_code = "W";
+            break;
+        case "relation":
+            type_code = "R";
+            break;
+    };
+    // return `${NOMINATIM_BASE_URL}/details?osmtype=${type_code}&osmid=${osm_ID}&format=json&addressdetails=1`
+    return `${NOMINATIM_BASE_URL}lookup?osm_ids=${type_code}${osm_ID}&format=json&extratags=1`
+}
+
+export async function searchByOSMID(osm_type, osm_ID){
+    const url = createOSMIDSearchURL(osm_type, osm_ID);
+    console.log('url', url)
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log('osmid search', data);
+    return (({display_name, address, extratags}) => ({display_name,address,extratags}))(data[0]);
+}
+
 // console.log(await searchNominatim(params));
 
 // console.log(formatNOMURL(NOMINATIM_BASE_URL, params));
