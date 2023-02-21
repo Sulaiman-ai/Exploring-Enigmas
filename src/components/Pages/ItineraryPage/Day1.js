@@ -6,7 +6,7 @@ function Day1(props) {
         <div>
             <Banner />
             <DayButton />
-            <h2> Day One </h2>
+            <h2 className="day-heading"> Day One </h2>
             <div className="planner-row">
                 <div className="time">00:00</div>
                 <textarea className="text-box"></textarea>
