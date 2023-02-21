@@ -25,7 +25,7 @@ body {
 .nav-links a {
   padding-right: 20px;
   text-decoration: none;
-  color: #16697A;
+  color: #16697a;
   font-size: 1.1rem;
 }
 
@@ -36,8 +36,8 @@ body {
 
 /* Homepage Hero Banner and content within banner */
 .hero-banner {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./travel-1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./travel-1.jpg");
   height: 650px;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,12 +86,18 @@ input::placeholder {
   color: white;
   cursor: pointer;
   width: 0;
+  border: none;
+}
+
+.search-icon:hover {
+  transition: 0.5s;
+  color: #16697a;
 }
 
 /* Itinerary page Banner */
 .itin-banner {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('./travel-4.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+    url("./travel-4.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -188,4 +194,14 @@ footer {
   height: 40px;
   justify-content: center;
   align-items: center;
+}
+
+/* Results wrapper styling */
+
+.result-wrapper {
+  background-color: rgb(22, 105, 122, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 5px;
 }
