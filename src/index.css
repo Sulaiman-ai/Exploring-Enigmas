@@ -90,7 +90,7 @@ input::placeholder {
 }
 
 .search-icon:hover {
-  transition: 0.3s;
+  transition: 0.5s;
   color: #16697a;
 }
 
@@ -194,4 +194,14 @@ footer {
   height: 40px;
   justify-content: center;
   align-items: center;
+}
+
+/* Results wrapper styling */
+
+.result-wrapper {
+  background-color: rgb(22, 105, 122, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 5px;
 }
