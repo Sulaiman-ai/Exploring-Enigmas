@@ -89,8 +89,8 @@ input::placeholder {
 }
 
 .search-icon:hover {
-  transition: 0.5s;
-  color: blue;
+  transition: 0.3s;
+  color: #16697a;
 }
 
 /* Itinerary page Banner */
