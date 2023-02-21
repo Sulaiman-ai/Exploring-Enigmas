@@ -86,6 +86,7 @@ input::placeholder {
   color: white;
   cursor: pointer;
   width: 0;
+  border: none;
 }
 
 .search-icon:hover {
