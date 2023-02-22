@@ -22,7 +22,7 @@ function Day1(props) {
             <DayButton />
             <h2 className="day-heading"> Day One </h2>
             {new Array(24).fill('').map((e,i)=>{
-                console.log(`${i}:00`);
+                // console.log(`${i}:00`);
                 // setKey(`${i}:00`)
 
                 return <TimeSlot index={`${i}:00`}/>

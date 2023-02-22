@@ -2,7 +2,7 @@ import { useState } from "react";
 import useLocalStorage from "./LocalStorageHook";
 
 function TimeSlot({index:key}){
-    console.log('key',key)
+    // console.log('key',key)
     const [storage, setStorage] = useLocalStorage(key, '');
     const [text, setText] = useState(storage);
 

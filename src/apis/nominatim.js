@@ -59,11 +59,16 @@ function createOSMIDSearchURL(osm_type, osm_ID){
 
 export async function searchByOSMID(osm_type, osm_ID){
     const url = createOSMIDSearchURL(osm_type, osm_ID);
-    console.log('url', url)
+    // console.log('url', url)
     const response = await fetch(url);
     const data = await response.json();
-    console.log('osmid search', data);
-    return (({display_name, address, extratags}) => ({display_name,address,extratags}))(data[0]);
+    // console.log('osmid search', data);
+    const return_data = (({display_name, address, extratags, lat, lon}) => ({display_name,address,extratags, lat, lon}))(data[0]);
+    return_data.address = return_data.display_name.split(',').slice(1).map(word => word.trim()).join(', ');
+    return_data.display_name = return_data.display_name.split(',')[0];
+    // console.log('return data', return_data);
+    return return_data;
+    // return (({display_name, address, extratags, lat, lon}) => ({display_name,address,extratags, lat, lon}))(data[0]);
 }
 
 // console.log(await searchNominatim(params));
