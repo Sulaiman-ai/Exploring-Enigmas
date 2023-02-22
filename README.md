@@ -39,7 +39,7 @@ Open the link to the live application in any modern browser.
 
 ## Live Application
 
-Link to your deployed application.
+https://63f64f6e24551b0a4c28711d--exploring-enigmas.netlify.app/
 
 ## Features
 
