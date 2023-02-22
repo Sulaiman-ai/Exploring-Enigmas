@@ -72,7 +72,7 @@ body {
   font-size: 17px;
 }
 
-input::placeholder {
+.search-wrapper input::placeholder {
   color: #ffffff !important;
   font-size: 1rem;
 }
