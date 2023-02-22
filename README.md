@@ -47,7 +47,7 @@ List of features ready and TODOs for future development
 
 - Search for a location.
 - Returns points of interest on a map and nearby hotels.
-- Itinerary page which saves users inputs to local storage.
+- Itinerary page which saves/retrieves user inputs to local storage.
 
 To-do list:
 
