@@ -3,7 +3,7 @@ function Banner() {
         <>
             <header>
                 <section className="itin-banner">
-                    <h1 className="itin-h1">
+                    <h1 className="banner-h1">
                         Add items to your itinerary...
                     </h1>
                 </section>
