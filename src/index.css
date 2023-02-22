@@ -198,13 +198,90 @@ footer {
 }
 
 /* Results wrapper styling */
-
 .result-wrapper {
   background-color: rgb(22, 105, 122, 0.5);
   border-radius: 8px;
   color: #fff;
   padding: 10px;
   margin-top: 5px;
+}
+
+/* Search Maps page style */
+.search-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    url("./travel-7.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.search-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #16697a;
+  margin: 30px 0;
+}
+
+.search-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-page-para {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 0;
+}
+
+.search-page-wrapper input {
+  border-radius: 30px;
+  height: 33px;
+  padding: 2px 10px 2px 10px;
+}
+
+.search-page-wrapper input:focus {
+  outline: 2px solid #ffa62b;
+}
+
+.search-page-wrapper input::placeholder {
+  color: #16697a !important;
+  font-size: 0.9rem;
+  font-family: Lato;
+}
+
+.search-wrapper p, .search-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #82c0cc;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: Lato;
+  font-size: 15px;
+  margin-left: 5px;
+  height: 40px;
+  width: 100px;
+  margin-bottom:20px;
+}
+
+.search-btn:hover {
+  background-color: #ffa62b;
 }
 
 /* Contact page styles */
@@ -215,9 +292,6 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.contact-banner {
   display: flex;
   align-items: center;
 }

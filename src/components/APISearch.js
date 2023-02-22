@@ -40,7 +40,7 @@ function MapsSearchBar(props) {
 //   };
 
   return (
-    <div className="search-wrapper">
+    <div className="search-page-wrapper">
       <input
         type="search"
         placeholder={props.placeholder}

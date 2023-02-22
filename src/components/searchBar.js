@@ -51,7 +51,7 @@ function SearchBar() {
       <button className="fas fa-search search-icon"></button>
       <input
         type="search"
-        placeholder="Search"
+        placeholder="Search for a hotel"
         className="search"
         onKeyDown={handleSubmit}
         onChange={handleChange}
