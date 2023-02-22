@@ -43,7 +43,7 @@ import { searchOTM } from './opentripmap.js';
 export async function search(name, location_name){
     // searches nominatimAPI to get the bounding box of a location
     const location = await nominatimSearchLocation(location_name);
-    console.log('location', location)
+    // console.log('location', location)
     let bounding_box = {
         lat_min: location.boundingbox[0],
         lat_max: location.boundingbox[1],
@@ -54,17 +54,17 @@ export async function search(name, location_name){
     // searches OpenTripMap for places within the bounding box
     let places = await searchOTM(name, bounding_box);
     places = places.slice(0, 5);
-    console.log('places', places);
+    // console.log('places', places);
     let placesList = await Promise.all(places
     .filter(place=> Boolean(place.properties.osm))
     .map(async (place)=>{
-        console.log('falsy?', Boolean(place.properties.osm))
-        console.log('osm', place.properties.osm)
+        // console.log('falsy?', Boolean(place.properties.osm))
+        // console.log('osm', place.properties.osm)
         let [osm_type, osm_id] = place.properties.osm.split("/")
         let data =  await searchByOSMID(osm_type, osm_id);
         return data;
     }));
-    console.log('placeList', placesList);
+    // console.log('placeList', placesList);
     return [placesList, {lat:location.lat, lon:location.lon}];
     // return data[0].properties.name;
     // Once it has found a list of places, run the Nominatim API to get the 

@@ -11,6 +11,8 @@ import Day6 from './components/Pages/ItineraryPage/Day6';
 import Day7 from './components/Pages/ItineraryPage/Day7';
 import MapSearch from './components/searchMaps';
 
+import 'leaflet/dist/leaflet.css';
+
 function App() {
   return (
     <>

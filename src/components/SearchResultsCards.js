@@ -1,10 +1,10 @@
-function SearchResultsCards(props){
+function SearchResultsCard(props){
     return (
         <div>
             <h5>{props.title}</h5>
             <p>{props.address}</p>
-            <p>Website:{props.website}</p>
-            <p>Categories:{props.categories}</p>
+            {/* <p>Website:{props.website}</p> */}
+            {/* <p>Categories:{props.categories}</p> */}
         </div>
     )
 }
@@ -18,4 +18,4 @@ function MapCard(props){
     )
 }
 
-export {SearchResultsCards, MapCard};
+export {SearchResultsCard, MapCard};
