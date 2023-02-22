@@ -5,7 +5,7 @@ import axios from "axios";
 // Search Bar Function
 function SearchBar() {
   const [searchInput, setSearchInput] = useState("");
-  const [hotelList, sethotelList] = useState([]);
+  const [hotelList, sethotelList] = useState(["0"]);
 
   const handleSubmit = async (event) => {
     const key = event.keyCode;
@@ -19,7 +19,7 @@ function SearchBar() {
             params: { q: searchInput },
             headers: {
               "X-RapidAPI-Key":
-                "e7ba25ecc0msh5d2a22f5c1f3025p11bef4jsn0feeeaeaef60",
+                "2550ddfad2msh03f58448c04a3a7p1fd4a2jsn0d1046483dd6",
               "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
             },
           }
@@ -57,17 +57,31 @@ function SearchBar() {
         onChange={handleChange}
         value={searchInput}
       />
-      <div className="result-wrapper">
+      <>
         {hotelList.length === 0 ? (
-          "No hotel found"
-        ) : (
+
+          <div className="result-wrapper">
           <ul>
-            {hotelList.map((hotel) => (
-              <li key={hotel.hotelId}>{hotel.regionNames.fullName}</li>
-            ))}
+            <li>No hotel found</li>
           </ul>
+          </div>
+        ) : (
+          
+      <>
+            {hotelList.map((hotel) => (
+              hotel.regionNames?.fullName === undefined || hotel.regionNames?.fullName === null || hotel.regionNames?.fullName === "" ? null :
+            <div className="result-wrapper">
+            <ul>
+              <li key={hotel.hotelId}>{hotel.regionNames?.fullName}</li>
+            </ul>
+          </div>
+
+            ))}
+
+          
+      </>
         )}
-      </div>
+      </>
     </div>
   );
 }
