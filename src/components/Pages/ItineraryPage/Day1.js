@@ -1,15 +1,41 @@
 import Banner from './Banner';
 import DayButton from './DayButton';
+import { useState } from 'react';
+import useLocalStorage from './LocalStorageHook';
+import TimeSlot from './ItinerarySlot';
 
 function Day1(props) {
+    // const [key, setKey] = useState('000');
+    // const [text, setText] = useLocalStorage(key, 'Lunch');
+
+    // const handleChange = (event) =>{
+    //     setText(event.target.value);
+    // }
+
+    // const handleKeyChange = (event) => {
+    //     setKey(event.target.key)
+    // }
+
     return (
         <div>
             <Banner />
             <DayButton />
-            <h2> Day One </h2>
-            <div className="planner-row">
+            <h2 className="day-heading"> Day One </h2>
+            {new Array(24).fill('').map((e,i)=>{
+                console.log(`${i}:00`);
+                // setKey(`${i}:00`)
+
+                return <TimeSlot index={`${i}:00`}/>
+
+                // return <div key={`row-${i}:00`} className="planner-row">
+                //     <div className="time">{`${i}:00`}</div>
+                //     <textarea key={`${i}:00`} className="text-box"></textarea>
+                //     <button className="save-btn">Save</button>
+                // </div>
+})}
+            {/* <div className="planner-row">
                 <div className="time">00:00</div>
-                <textarea className="text-box"></textarea>
+                <textarea className="text-box" value={text} onChange={handleChange}></textarea>
                 <button className="save-btn">Save</button>
             </div>
             <div className="planner-row">
@@ -126,7 +152,7 @@ function Day1(props) {
                 <div className="time">23:00</div>
                 <textarea className="text-box"></textarea>
                 <button className="save-btn">Save</button>
-            </div>
+            </div> */}
 
         </div>
 

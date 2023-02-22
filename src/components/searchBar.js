@@ -48,9 +48,11 @@ function SearchBar() {
 
   return (
     <div className="search-wrapper">
+      <button className="fas fa-search search-icon"></button>
       <input
         type="search"
         placeholder="Search"
+        className="search"
         onKeyDown={handleSubmit}
         onChange={handleChange}
         value={searchInput}
