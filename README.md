@@ -35,7 +35,7 @@ A group project to practise collaboration on GitHub, Agile development, React an
 
 ## Setup
 
-Open the link to the live application in any modern browser.
+Open the live application link in any modern browser.
 
 ## Live Application
 
