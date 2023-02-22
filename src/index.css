@@ -72,7 +72,7 @@ body {
   font-size: 17px;
 }
 
-input::placeholder {
+.search-wrapper input::placeholder {
   color: #ffffff !important;
   font-size: 1rem;
 }
@@ -101,16 +101,17 @@ input::placeholder {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-.itin-h1 {
+/* H1 in banner on itinerary page */
+.banner-h1 {
   margin-left: 100px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -204,4 +205,70 @@ footer {
   color: #fff;
   padding: 10px;
   margin-top: 5px;
+}
+
+/* Contact page styles */
+.contact-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    url("./travel-6.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-banner {
+  display: flex;
+  align-items: center;
+}
+
+.contact-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #16697a;
+  margin: 30px 0;
+}
+
+/* Contact form styles */
+form {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  outline: none;
+}
+
+form > * {
+  padding: 7px 10px;
+  margin-bottom: 7px;
+  border: 1px solic #ccc;
+}
+
+form h3 {
+  text-align: center;
+  color: #82c0cc;
+}
+
+form button {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #82c0cc;
+  color: white;
+  border-radius: 30px;
+  height: 40px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ffa62b;
+}
+
+.success-message {
+  text-align: center;
+  color: #82c0cc;
+  margin: 15px 0;
 }

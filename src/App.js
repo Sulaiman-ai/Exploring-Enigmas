@@ -10,6 +10,7 @@ import Day5 from './components/Pages/ItineraryPage/Day5';
 import Day6 from './components/Pages/ItineraryPage/Day6';
 import Day7 from './components/Pages/ItineraryPage/Day7';
 import MapSearch from './components/searchMaps';
+import Contact from './components/Pages/Contact/Contact';
 
 import 'leaflet/dist/leaflet.css';
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/day-six" element={<Day6 />} />
         <Route path="/day-seven" element={<Day7 />} />
         <Route path="/maps" element={<MapSearch />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
