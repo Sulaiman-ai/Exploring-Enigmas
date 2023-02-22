@@ -59,18 +59,27 @@ function SearchBar() {
       />
       <>
         {hotelList.length === 0 ? (
+
           <div className="result-wrapper">
-          <ul><li>"No hotel found"</li></ul>  </div>
-        ) : (<>
+          <ul>
+            <li>No hotel found</li>
+          </ul>
+          </div>
+        ) : (
+          
+      <>
             {hotelList.map((hotel) => (
               hotel.regionNames?.fullName === undefined || hotel.regionNames?.fullName === null || hotel.regionNames?.fullName === "" ? null :
-              <div className="result-wrapper">
-<ul><li key={hotel.hotelId}>{hotel.regionNames?.fullName}</li></ul></div>
+            <div className="result-wrapper">
+            <ul>
+              <li key={hotel.hotelId}>{hotel.regionNames?.fullName}</li>
+            </ul>
+          </div>
 
             ))}
 
           
-              </>
+      </>
         )}
       </>
     </div>
