@@ -35,11 +35,11 @@ A group project to practise collaboration on GitHub, Agile development, React an
 
 ## Setup
 
-Open the link to the live application in any modern browser.
+Open the live application link in any modern browser.
 
 ## Live Application
 
-Link to your deployed application.
+https://63f64f6e24551b0a4c28711d--exploring-enigmas.netlify.app/
 
 ## Features
 
